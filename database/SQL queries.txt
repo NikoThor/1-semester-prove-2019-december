@@ -1,0 +1,39 @@
+CREATE DATABASE quizdatabase;
+
+SELECT * FROM quiz;
++----+----------------------------------------------------------+-----------+---------------+---------+---------+
+| id | question                                                 | answer1   | answer2       | answer3 | answer4 |
++----+----------------------------------------------------------+-----------+---------------+---------+---------+
+|  1 | hvad er Danmarks hovedstad?                              | København | washington dc | Tokyo   | Næstved |
+|  2 | Hvem vandt verdensmesterskabet i leauge of legends 2019? | SKT       | G2            | Phoenix | Fanatic |
+|  3 | Hvilken en er ikke en fastfoodchain                      | Mcdonalds | BurgerKing    | Corsair | KFC     |
++----+----------------------------------------------------------+-----------+---------------+---------+---------+
+
+INSERT INTO quiz (question, answer1, answer2, answer3, answer4) VALUES('hvad drikker jeg lige nu?', 'en kop kaffe', 'et glas mælk','et glas vand','Sodavand');
++----+----------------------------------------------------------+-----------+---------------+---------+---------+
+| id | question                                                 | answer1   | answer2       | answer3 | answer4 |
++----+----------------------------------------------------------+-----------+---------------+---------+---------+
+|  1 | hvad er Danmarks hovedstad?                              | København | washington dc | Tokyo   | Næstved |
+|  2 | Hvem vandt verdensmesterskabet i leauge of legends 2019? | SKT       | G2            | Phoenix | Fanatic |
+|  3 | Hvilken en er ikke en fastfoodchain                      | Mcdonalds | BurgerKing    | Corsair | KFC     |
++----+----------------------------------------------------------+-----------+---------------+---------+---------+
+
+mysql> SELECT * from quiz;
++----+----------------------------------------------------------+--------------+---------------+--------------+----------+
+| id | question                                                 | answer1      | answer2       | answer3      | answer4  |
++----+----------------------------------------------------------+--------------+---------------+--------------+----------+
+|  1 | hvad er Danmarks hovedstad?                              | København    | washington dc | Tokyo        | Næstved  |
+|  2 | Hvem vandt verdensmesterskabet i leauge of legends 2019? | SKT          | G2            | Phoenix      | Fanatic  |
+|  3 | Hvilken en er ikke en fastfoodchain                      | Mcdonalds    | BurgerKing    | Corsair      | KFC      |
+|  4 | hvad drikker jeg lige nu?                                | en kop kaffe | et glas mælk  | et glas vand | Sodavand |
++----+----------------------------------------------------------+--------------+---------------+--------------+----------+
+
+
+mysql> DELETE FROM quiz WHERE answer4='Sodavand';
++----+----------------------------------------------------------+-----------+---------------+---------+---------+
+| id | question                                                 | answer1   | answer2       | answer3 | answer4 |
++----+----------------------------------------------------------+-----------+---------------+---------+---------+
+|  1 | hvad er Danmarks hovedstad?                              | København | washington dc | Tokyo   | Næstved |
+|  2 | Hvem vandt verdensmesterskabet i leauge of legends 2019? | SKT       | G2            | Phoenix | Fanatic |
+|  3 | Hvilken en er ikke en fastfoodchain                      | Mcdonalds | BurgerKing    | Corsair | KFC     |
++----+----------------------------------------------------------+-----------+---------------+---------+---------+
