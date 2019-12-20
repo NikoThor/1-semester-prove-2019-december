@@ -1,3 +1,5 @@
+import java.util.*;
+
 /**
  * Developed by András Ács (acsandras@gmail.com)
  * Zealand / www.zealand.dk
@@ -9,9 +11,7 @@ public class Loops {
 
     private String brugere[] = {"Anders", "Birgit", "Carsten", "Dennis", "Esben"};
 
-    public String[] getBrugere() {
-        return brugere;
-    }
+    public String[] getBrugere() {return brugere;}
 
     public static void main(String[] args) {
         Loops l = new Loops();
@@ -26,22 +26,29 @@ public class Loops {
      * Viser en liste med brugere i konsollen
      */
     public void printBrugereArr() {
-
-        // TODO Din kode her
+        for (String i : brugere)
+            System.out.println(i);
     }
 
     /**
      * Viser en liste med brugere i konsollen i omvendt rækkefølge
      */
-    public void printBrugereReverseArr() {
 
-        // TODO Din kode her
+    public void printBrugereReverseArr() {
+        List<String> brugerBagfra = Arrays.asList(brugere);
+        Collections.reverse(brugerBagfra);
+        String[] reversed = brugerBagfra.toArray(brugere);
+        System.out.println(Arrays.toString(reversed));
 
     }
 
     public void waitingFor0() {
-
-        // TODO Din kode her
+        Scanner input = new Scanner(System.in);
+        int i = 1;
+        while(i !=0) {
+            System.out.println("Venter på 0! " + "Skriv et tal...");
+           i = input.nextInt();
+        }
  
     }
 }
