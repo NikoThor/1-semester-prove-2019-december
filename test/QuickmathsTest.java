@@ -2,16 +2,19 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class QuickmathsTest {
+public class QuickmathsTest  {
 
     @Test
     public void testSum() {
-        // TODO Din kode her
+
+        Quickmaths m = new Quickmaths();
+        assertEquals(10,m.sum(5,5));
     }
 
     @Test
     public void testGennemsnit() {
-        // TODO Din kode her
+        Quickmaths m = new Quickmaths();
+        assertEquals(5,m.gennemsnit(5,5));
     }
 
 }
