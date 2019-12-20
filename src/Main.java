@@ -8,6 +8,7 @@
 public class Main {
     // TODO Din kode her
     public static void main(String[] args) {
+        // Her er en kommentar, jeg blev ret stresset tilsidst og når desværre ikke at kommentere alt min kode.
         System.out.println("Hello world!");
         hello("András");
         hello("");
